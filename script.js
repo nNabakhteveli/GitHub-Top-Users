@@ -124,3 +124,20 @@ function gridView() {
   document.getElementById("copyright").style.top = "2005px";
 }
 copyright.innerHTML = "© All Rights Reserved - 2020 < Nika Nabakhteveli />"
+
+const greetingsToOmedia = () => {
+  console.log('Hello people from Omedia!')
+  setTimeout(() => {
+    console.log("I hope you'll like my little project")
+    setTimeout(() => {
+      console.log('I know this is not exactly what you were asking for')
+      setTimeout(() => {
+        console.log('But I tried my best to make it as close as possible to the requirements')
+        setTimeout(() => {
+          console.log("I hope we'll be friends :) later")
+        }, 2000)
+      }, 2000)
+    }, 2000)
+  }, 1500)
+}
+greetingsToOmedia();

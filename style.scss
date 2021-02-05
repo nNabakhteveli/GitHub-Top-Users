@@ -10,13 +10,27 @@ body{
     color: white;
 }
 
+#list {
+    padding-inline-start: 0;
+    display: grid;
+    grid-gap: 20px;
+}
+
+
 .header {
     height: 90px;
     width: 101.2%;
     margin-left: -8px;
     margin-top: -8px;
-    background-color: $headerBackgroundColor;
+    background-color: $headerBackgroundColor;    
 }
+
+.header::after {
+    position: absolute;
+    top: 7px;
+    right: 15px;
+}
+
 
 #active-user-text {
     position: absolute;

@@ -12,9 +12,8 @@ const users = [
   {name: "jongleberry"}
 ];
 
-
 const searchInput = document.getElementById("searchBox");
-const list = document.getElementById("list");
+let list = document.getElementById("list");
 let headerText = document.getElementById("active-user-text");
 let buttons = document.getElementById("buttons");
 
@@ -90,18 +89,18 @@ function noResults(){
   headerText.style.top = "100px";
 }
 
-searchInput.addEventListener("input", (event) => {
-  let value = event.target.value;
-  if(value && value.length > 0) {
-    value = value.trim();
-    setList(users.filter(person => {
-      return person.name.includes(value);
-    }));
-  }else {
-    clearList();
-  }
-});
-
+// This needs to be commented out for a while
+// searchInput.addEventListener("input", (event) => {
+//   let value = event.target.value;
+//   if(value && value.length > 0) {
+//     value = value.trim();
+//     setList(users.filter(person => {
+//       return person.name.includes(value);
+//     }));
+//   }else {
+//     clearList();
+//   }
+// });
 
 let elements = document.getElementsByClassName("column");
 let container = document.getElementsByClassName("container");
@@ -123,19 +122,65 @@ function gridView() {
   }
   document.getElementById("copyright").style.top = "2005px";
 }
-copyright.innerHTML = "© All Rights Reserved - 2020 < Nika Nabakhteveli />"
+copyright.innerHTML = "© All Rights Reserved - 2020 < Nika Nabakhteveli />";
+
+
+
+// Making new search bar. Currently in proccess
+const usersList = document.getElementById('list');
+const searchBar = document.getElementById('searchBox');
+let githubUsers = [];
+
+searchBar.addEventListener('keyup', (e) => {
+  const searchString = e.target.value.toLowerCase();
+
+  const filteredUsers = githubUsers.filter((user) => {
+    return (
+      user.login.toLowerCase().includes(searchString) ||
+      user.id.toLowerCase().includes(searchString)
+      );
+    });
+    loadUsers(filteredUsers);
+  });
+  
+  const loadUsers = async () => {
+    try {
+      const res = await fetch(`https://api.github.com/users/${user}`);
+      githubUsers = await res.json();
+      loadUsers(githubUsers);
+    } catch (err) {
+      console.error(err);
+    }
+};
+
+const loadUsers = (users) => {
+  const htmlString = users.map((user) => {
+    return `
+    <li class="Users">
+    <h2>${user.login}</h2>
+    <p>House: ${user.id}</p>
+    <img src="${user.avatar_url}"></img>
+    </li>
+    `;
+  })
+  .join('');
+  usersList.innerHTML = htmlString;
+};
+loadUsers();
+
+
 
 const greetingsToOmedia = () => {
-  console.log('Hello people from Omedia!')
+    console.log(`Hello people from Omedia!`)
   setTimeout(() => {
-    console.log("I hope you'll like my little project")
-    setTimeout(() => {
+      console.log("I hope you'll like my little project")
+      setTimeout(() => {
       console.log('I know this is not exactly what you were asking for')
       setTimeout(() => {
-        console.log('But I tried my best to make it as close as possible to the requirements')
-        setTimeout(() => {
-          console.log("I hope we'll be friends :) later")
-        }, 2000)
+          console.log('But I tried my best to make it as close as possible to the requirements')
+          setTimeout(() => {
+              console.log("I hope we'll be friends :) later")
+            }, 2000)
       }, 2000)
     }, 2000)
   }, 1500)

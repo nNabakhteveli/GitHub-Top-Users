@@ -3,14 +3,17 @@
           box-sizing: border-box;
 }
 
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background-color: #0D1117;
   color: white;
+}
+
+#list {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
 }
 
 .header {
@@ -19,6 +22,12 @@ body {
   margin-left: -8px;
   margin-top: -8px;
   background-color: #161B22;
+}
+
+.header::after {
+  position: absolute;
+  top: 7px;
+  right: 15px;
 }
 
 #active-user-text {

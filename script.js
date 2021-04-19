@@ -126,63 +126,37 @@ copyright.innerHTML = "© All Rights Reserved - 2020 < Nika Nabakhteveli />";
 
 
 
-// Making new search bar. Currently in proccess
-const usersList = document.getElementById('list');
-const searchBar = document.getElementById('searchBox');
-let githubUsers = [];
 
-searchBar.addEventListener('keyup', (e) => {
-  const searchString = e.target.value.toLowerCase();
+document.getElementById('button').addEventListener('click', loadUsers);
 
-  const filteredUsers = githubUsers.filter((user) => {
-    return (
-      user.login.toLowerCase().includes(searchString) ||
-      user.id.toLowerCase().includes(searchString)
-      );
-    });
-    loadUsers(filteredUsers);
-  });
-  
-  const loadUsers = async () => {
-    try {
-      const res = await fetch(`https://api.github.com/users/${user}`);
-      githubUsers = await res.json();
-      loadUsers(githubUsers);
-    } catch (err) {
-      console.error(err);
+function loadUsers() {
+  const xhr = new XMLHttpRequest();
+  const URL = 'https://api.github.com/users';
+
+  xhr.open('GET', URL, true);
+
+
+  xhr.onload = function() {
+    let output;
+    if(this.status == 200) {
+      let users = this.responseText;
+      
+      console.log(users);
+      
+      for(let i in users) {
+        output += `
+        <div class='column' style="background-color:#aaa;">
+        <img src=${users[i].avatar_url} class='image'>
+        <a href=${users[i].html_url} style="text-decoration: none;">${users[i].login}</a>
+            <ul>
+              <li>Twitter: <a> ${users[i].url} </a>  </li>
+            </ul> 
+        </div>
+        `;
+
+        document.getElementById('container').innerHTML = output;
+      }
     }
-};
-
-const loadUsers = (users) => {
-  const htmlString = users.map((user) => {
-    return `
-    <li class="Users">
-    <h2>${user.login}</h2>
-    <p>House: ${user.id}</p>
-    <img src="${user.avatar_url}"></img>
-    </li>
-    `;
-  })
-  .join('');
-  usersList.innerHTML = htmlString;
-};
-loadUsers();
-
-
-
-const greetingsToOmedia = () => {
-    console.log(`Hello people from Omedia!`)
-  setTimeout(() => {
-      console.log("I hope you'll like my little project")
-      setTimeout(() => {
-      console.log('I know this is not exactly what you were asking for')
-      setTimeout(() => {
-          console.log('But I tried my best to make it as close as possible to the requirements')
-          setTimeout(() => {
-              console.log("I hope we'll be friends :) later")
-            }, 2000)
-      }, 2000)
-    }, 2000)
-  }, 1500)
+  }
+  xhr.send();
 }
-greetingsToOmedia();

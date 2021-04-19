@@ -16,6 +16,13 @@
     <title>Landing Page</title>
 </head>
 <body>
+
+    <div id="newdiv"></div>
+    <p id="p"></p><br><br><br><br>
+    <button id="button">Get Users</button>
+
+
+
     <div class="header">
         <i class="fab fa-github github-icon"></i>
         <input autofocus type="text" id="searchBox" class="search-box" placeholder="Search For User" autocomplete="off" name="search">
@@ -29,8 +36,7 @@
         <button class="gridView" onclick="gridView()"><i class="fa fa-th-large"></i> Grid View</button>
     </div>
     
-    <div class="container">
-        <div class="row">
+    <div id="container">
             <div class="column" style="background-color:#aaa;">
                 <img class="image" src="https://avatars3.githubusercontent.com/u/47313?s=400&u=7ba05204271a726f8642ac15864e2f361b5c0198&v=4" alt="UserPic">
                 <a href="./fabpot/fabpot.html" style="text-decoration: none;"><p>Fabien Potencier</p></a>
@@ -42,109 +48,6 @@
                     </ul>
                 </div>
             </div>
-            <div class="column" style="background-color:#bbb;">
-                <img class="image" src="https://avatars3.githubusercontent.com/u/1060?s=400&u=d4790e0ec60657f07aae1a398d7171f167b8d8d0&v=4" alt="UserPic">
-                <div class="listDiv">
-                    <a href="./andrew/andrew.html" style="text-decoration: none;"><p>Andrew Nesbitt</p></a>
-                    <ul>
-                        <a href="https://github.com/andrew/hellococoa" target="_blank" style="text-decoration: none;"><li>hellococoa</li></a>
-                        <a href="https://github.com/andrew/ticketapp" target="_blank" style="text-decoration: none;"><li>ticketapp</li></a>
-                        <a href="https://github.com/andrew/dragonfly_example" target="_blank" style="text-decoration: none;"><li>Dragonfly_Example</li></a>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="column" style="background-color:#ccc;">
-            <img class="image" src="https://avatars3.githubusercontent.com/u/463230?s=400&u=0c486fbe3a30dadd5c5981a9fbc3a0d269ca0c33&v=4" alt="UserPic">
-            <div class="listDiv">
-                <a href="./taylorotwell/taylorotwell.html" style="text-decoration: none;"><p>Taylor Otwell</p></a>
-                <ul>
-                    <a href="https://github.com/taylorotwell/Packages" target="_blank" style="text-decoration: none;"><li>Packages</li></a>
-                    <a href="https://github.com/taylorotwell/sequel-pro" target="_blank" style="text-decoration: none;"><li>sequel-pro</li></a>
-                    <a href="https://github.com/taylorotwell/once" target="_blank" style="text-decoration: none;"><li>once</li></a>
-                </ul>
-            </div>
-        </div>
-        <div class="column" style="background-color:#aaa;">
-            <img class="image" src="https://avatars0.githubusercontent.com/u/8784712?s=400&u=f51db94a64fd0780bbfe3fc9d5f8609be35661a0&v=4" alt="UserPic">
-            <div class="listDiv">
-                <a href="./egoist/egoist.html" style="text-decoration: none;"><p>EGOIST</p></a>
-                <ul>
-                    <a href="https://github.com/egoist/markdown-syntax-zhtw/pulls" target="_blank" style="text-decoration: none;"><li>markdown-syntax-zhtw</li></a>
-                    <a href="https://github.com/egoist/MoniCoin" target="_blank" style="text-decoration: none;"><li>MoniCoin</li></a>
-                    <a href="https://github.com/egoist/vagrant-slim" target="_blank" style="text-decoration: none;"><li>vagrant-slim</li></a>
-                </ul>
-            </div>
-        </div>
-        <div class="column" style="background-color:#bbb;">
-            <img class="image" src="https://avatars0.githubusercontent.com/u/1889710?s=460&u=873c7ab6bdf63f0c6c768258309d57e7acf100fa&v=4" alt="UserPic">
-            <div class="listDiv">
-                <a href="./HugoGiraudel/HugoGiraudel.html" style="text-decoration: none;"><p>Hugo “Kitty” Giraudel</p></a>
-                <ul>
-                    <a href="https://github.com/HugoGiraudel/PHP-hangman-game" target="_blank" style="text-decoration: none;"><li>PHP-hangman-game</li></a>
-                    <a href="https://github.com/HugoGiraudel/SassyLogger" target="_blank" style="text-decoration: none;"><li>SassyLogger</li></a>
-                    <a href="https://github.com/HugoGiraudel/SassySort" target="_blank" style="text-decoration: none;"><li>SassySort</li></a>
-                </ul>
-            </div>
-        </div>
-        <div class="column" style="background-color:#ccc;">
-            <img class="image" src="https://avatars2.githubusercontent.com/u/140370?s=460&v=4" alt="UserPic">
-            <div class="listDiv">
-                <a href="./ornicar, Thibault Duplessis/ornicar.html" style="text-decoration: none;"><p>Thibault Duplessis</p></a>
-                <ul>
-                    <a href="https://github.com/ornicar/tsp" target="_blank" style="text-decoration: none;"><li>tsp</li></a>
-                    <a href="https://github.com/ornicar/dmFlowPlayerPlugin" target="_blank" style="text-decoration: none;"><li>dmFlowPlayerPlugin</li></a>
-                    <a href="https://github.com/ornicar/dmCoreTranslatorPlugin" target="_blank" style="text-decoration: none;"><li>dmCoreTranslatorPlugin</li></a>
-                </ul>
-            </div>
-        </div>
-        <div class="column" style="background-color:#aaa;">
-            <img class="image" src="https://avatars0.githubusercontent.com/u/166921?s=460&u=01788cd9ae25b31e3c0f2dc5b8c79631e14a59ba&v=4" alt="UserPic">
-            <div class="listDiv">
-                <a href="./bebraw, Juho Vepsäläinen/bebraw.html" style="text-decoration: none;"><p>Juho Vepsäläinen</p></a>
-                <ul>
-                    <a href="https://github.com/bebraw/Harmony-Brushes" target="_blank" style="text-decoration: none;"><li>Harmony-Brushes</li></a>
-                    <a href="https://github.com/bebraw/django-navi" target="_blank" style="text-decoration: none;"><li>django-navi</li></a>
-                    <a href="https://github.com/bebraw/rjs-build-demo" target="_blank" style="text-decoration: none;"><li>rjs-build-demo</li></a>
-                </ul>
-            </div>
-        </div>
-        <div class="column" style="background-color:#bbb;">
-            <img class="image" src="https://avatars3.githubusercontent.com/u/194400?s=460&u=405fb897c18f414ea8c4f4f2613fbef605855f02&v=4" alt="UserPic">
-            <div class="listDiv">
-                <a href="./nelsonic/nelsonic.html" style="text-decoration: none;"><p>Nelson</p></a>
-                <ul>
-                    <a href="https://github.com/nelsonic/stackvm" target="_blank" style="text-decoration: none;"><li>stackvm</li></a>
-                    <a href="https://github.com/nelsonic/whistle" target="_blank" style="text-decoration: none;"><li>whistle</li></a>
-                    <a href="https://github.com/nelsonic/grpwnd" target="_blank" style="text-decoration: none;"><li>grpwnd</li></a>
-                </ul>
-            </div>
-        </div>
-        <div class="column" style="background-color:#ccc;">
-            <img class="image" src="https://avatars1.githubusercontent.com/u/64996?s=460&v=4" alt="UserPic">
-            <div class="listDiv">
-                <a href="./alexcrichton/alexcrichton.html" style="text-decoration: none;"><p>Alex Crichton</p></a>
-                <ul>
-                    <a href="https://github.com/alexcrichton/hacku" target="_blank" style="text-decoration: none;"><li>hacku</li></a>
-                    <a href="https://github.com/alexcrichton/dcfs" target="_blank" style="text-decoration: none;"><li>dcfs</li></a>
-                    <a href="https://github.com/alexcrichton/golden-circle" target="_blank" style="text-decoration: none;"><li>golden-circle</li></a>
-                </ul>
-            </div>
-        </div>
-        <div class="column" style="background-color:#aaa;">
-            <img class="image" src="https://avatars3.githubusercontent.com/u/643505?s=460&u=dae9100bbd42543c6f8e0ca857a0d34e820c6432&v=4" alt="UserPic">
-            <div class="listDiv">
-                <a href="./jonathanong/jonathanong.html" style="text-decoration: none;"><p>jongleberry</p></a>
-                <ul>
-                    <a href="https://github.com/jonathanong/textcomplete" target="_blank" style="text-decoration: none;"><li>textcomplete</li></a>
-                    <a href="https://github.com/jonathanong/complement" target="_blank" style="text-decoration: none;"><li>complement</li></a>
-                    <a href="https://github.com/alexcrichton/golden-circle" target="_blank" style="text-decoration: none;"><li>golden-circle</li></a>
-                </ul>
-            </div>
-        </div>
-    </div>
 </div>
 
 <footer class="footer">

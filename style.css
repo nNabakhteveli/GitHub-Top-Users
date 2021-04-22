@@ -125,6 +125,7 @@ body {
 
 #button {
   margin-top: 100px;
+  cursor: pointer;
 }
 
 .gh-username {
@@ -146,6 +147,24 @@ body {
   border-radius: 100px;
   width: 150px;
   margin-left: 20px;
+}
+
+.search-result-profile-image {
+  border-radius: 100px;
+  width: 70px;
+  margin-left: 20px;
+}
+
+.search-result-items {
+  width: 20%;
+  background-color: grey;
+}
+
+.search-result-username {
+  color: white;
+  position: relative;
+  left: 110px;
+  top: 60px;
 }
 
 p {

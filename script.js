@@ -139,24 +139,30 @@ function loadUsers() {
   xhr.onload = function() {
     let output;
     if(this.status == 200) {
-      let users = this.responseText;
+      let users = JSON.parse(this.responseText);
       
+      console.log(Array.isArray(users));
       console.log(users);
-      
-      for(let i in users) {
-        output += `
-        <div class='column' style="background-color:#aaa;">
-        <img src=${users[i].avatar_url} class='image'>
-        <a href=${users[i].html_url} style="text-decoration: none;">${users[i].login}</a>
-            <ul>
-              <li>Twitter: <a> ${users[i].url} </a>  </li>
-            </ul> 
-        </div>
-        `;
 
-        document.getElementById('container').innerHTML = output;
+      let counter = 0;
+      for(i in users) {
+          output += `
+            <div class="column" style="background-color:#aaa;">
+              <img src=${users[i].avatar_url} class="image" />
+              <ul style="list-style-type: none;">
+                <li><a class="gh-username" href=${users[i].html_url} style="text-decoration: none; color: black;" target="_blank">${users[i].login}</a></li>
+                <li>Account type: ${users[i].type}</li>
+                <li>Twitter: ${users[i].login}</li>
+              </ul> 
+            </div> `;
+            counter ++;
+
+            if(counter == 10) {
+              break;  
+            }
+        }
       }
-    }
+    document.getElementById('container').innerHTML = output;
   }
   xhr.send();
 }

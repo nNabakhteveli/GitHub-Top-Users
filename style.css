@@ -123,6 +123,16 @@ body {
   clear: both;
 }
 
+#button {
+  margin-top: 100px;
+}
+
+.gh-username {
+  font-size: 2rem;
+  margin-left: -10px;
+}
+
+
 #container {
   border: 5px solid teal;
   border-radius: 10px;

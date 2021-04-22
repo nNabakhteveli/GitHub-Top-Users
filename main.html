@@ -16,39 +16,22 @@
     <title>Landing Page</title>
 </head>
 <body>
-
-    <div id="newdiv"></div>
-    <p id="p"></p><br><br><br><br>
+    
     <button id="button">Get Users</button>
-
-
-
+    
     <div class="header">
         <i class="fab fa-github github-icon"></i>
         <input autofocus type="text" id="searchBox" class="search-box" placeholder="Search For User" autocomplete="off" name="search">
     </div>
     <ul class="list-group" id="list" style="list-style-type: none;"></ul>
     
-
-    <h1 id="active-user-text">10 most active GitHub users according to <a href="https://gist.github.com/paulmillr/2657075/" style="text-decoration: none; color: teal;" target="_blank">THIS</a></h1>
     <div id="buttons">
         <button class="listView" onclick="listView()"><i class="fa fa-bars"></i> List View</button>
         <button class="gridView" onclick="gridView()"><i class="fa fa-th-large"></i> Grid View</button>
     </div>
     
-    <div id="container">
-            <div class="column" style="background-color:#aaa;">
-                <img class="image" src="https://avatars3.githubusercontent.com/u/47313?s=400&u=7ba05204271a726f8642ac15864e2f361b5c0198&v=4" alt="UserPic">
-                <a href="./fabpot/fabpot.html" style="text-decoration: none;"><p>Fabien Potencier</p></a>
-                <div class="listDiv">
-                    <ul>
-                        <a href="https://github.com/fabpot/security-checker" target="_blank" style="text-decoration: none;"><li>Security Checker</li></a>
-                        <a href="https://github.com/fabpot/carew" target="_blank" style="text-decoration: none;"><li>CareW</li></a>
-                        <a href="https://github.com/fabpot/Pimple" target="_blank" style="text-decoration: none;"><li>Pimple</li></a>
-                    </ul>
-                </div>
-            </div>
-</div>
+    <div id="container"></div>
+
 
 <footer class="footer">
     <p class="contactme">Contact Me!</p>
@@ -60,6 +43,6 @@
         <hr class="hrTag">
         <p id="copyright"></p>
     </footer>
+    <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
 </html>

@@ -1,6 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -10,7 +10,7 @@ body {
 
 #list {
   -webkit-padding-start: 0;
-          padding-inline-start: 0;
+  padding-inline-start: 0;
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
@@ -129,9 +129,10 @@ body {
 
 .gh-username {
   font-size: 2rem;
-  margin-left: -10px;
+  position: relative;
+  top: -16px;
+  left: -1px;
 }
-
 
 #container {
   border: 5px solid teal;
@@ -177,9 +178,9 @@ li {
   font-family: 'Hind Siliguri', sans-serif;
   opacity: 0.8;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .contactme {
@@ -263,9 +264,9 @@ li {
     font-size: 18px;
     left: 40px;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   .footer {
     width: 103%;
@@ -301,9 +302,9 @@ li {
     font-size: 18px;
     left: 120px;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     top: 3590px;
   }
   .footer {
